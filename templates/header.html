@@ -1,0 +1,216 @@
+{% load static %}
+
+<header>
+  <!--KF TOP WRAP START-->
+  <div class="kf_top_wrap">
+    <!--KF TOP BAR START-->
+    <div class="kf_top_bar">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+            <div class="kf_top_left_text">
+              <span>Trending News</span>
+              <div class="top-news-slide">
+                <div>
+                  <p>BlogMag Launches Bitcoin Essay Series With Author</p>
+                </div>
+                <div>
+                  <p>BlogMag Launches Bitcoin Essay Series With Author</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class="kf_top_right_text">
+              <span>Thursday, 31 June</span>
+              <ul class="top_icon">
+                <li>
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-dribbble"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-rss"></i></a>
+                </li>
+              </ul>
+              <div class="top_drop_btn">
+                <div class="dropdown">
+                  <button
+                    class="dropdown-toggle"
+                    type="button"
+                    id="dropdownMenu1"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                  >
+                    <img
+                      src="{% static 'images/country_fig.png' %}"
+                      alt=""
+                    />U.S
+                  </button>
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenu1"
+                  >
+                    <li>
+                      <a href="#"
+                        ><img
+                          src="{% static 'images/country_fig.png' %}"
+                          alt=""
+                        />U.S</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><img
+                          src="{% static 'images/country_fig.png' %}"
+                          alt=""
+                        />A.S</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><img
+                          src="{% static 'images/country_fig.png' %}"
+                          alt=""
+                        />U.A</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--KF TOP BAR END-->
+  </div>
+  <!--KF TOP WRAP END-->
+
+  <!--KF LOGO WRAP START-->
+  <div class="kf_logo_wrap">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="kf_logo">
+            <a href="#"
+              ><img src="{% static 'images/logo-top.png' %}" alt=""
+            /></a>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="kf_banner_add overlay">
+            <div class="kf_add_text">
+              <h5>Best Business ,<br />News Magazine</h5>
+            </div>
+            <div class="kf_add_content">
+              <h3>Banner Ad</h3>
+              <span>760 x 90</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--KF LOGO WRAP END-->
+
+  <!--KF NAVI WRAP START-->
+  <div class="kf_nav_wrap">
+    <div class="container">
+      <!--KF NAVIGATION ROW START-->
+      <div class="kf_navigation_row">
+        <div class="navigation">
+          <ul>
+            <li>
+              <a class="active" href="#"><i class="fa fa-home"></i></a>
+            </li>
+            <li><a class="yellow_light_bg" href="index.html">Home</a></li>
+            <li><a class="blue_bg" href="{% url 'post_list' category='news' %}">news</a></li>
+            <li><a class="green_bg" href="{% url 'post_list' category='sports' %}">sports</a></li>
+            <li class="mega_menu">
+              <a class="parat_bg" href="{% url 'post_list' category='business' %}">Business</a>
+              <div class="kf_menu_dropdown">
+                <div class="mega-slider">
+                  {% for biz in business_list|slice:"0:5" %}
+                  <div>
+                    <div class="kf_blog_medium grid">
+                      <figure>
+                        <img
+                          src="{{biz.thumbnail_url}}" style="width: 269px;height: 212px; object-fit: cover;"
+                          alt=""
+                        />
+                      </figure>
+                      <div class="kf_blog_text">
+                        <h6><a href="#">{{biz.title|slice:":50"}}</a></h6>
+                        <a href="#"
+                          ><i class="fa fa-calendar-check-o"></i>{{biz.timestamp|date:'F j, Y' }}</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  {% endfor %}
+
+                </div>
+              </div>
+            </li>
+            <li>
+              <a class="pinck_bg" href="{% url 'post_list' category='entertainment' %}">entertainment</a>
+            </li>
+            <li>
+              <a class="blue_bg" href="{% url 'post_list' category='travel' %}">Travel</a>
+            </li>
+            <li>
+              <a class="yellow_bg" href="contact-us.html">contact us</a>
+            </li>
+          </ul>
+        </div>
+        <!--DL Menu Start-->
+        <div id="kode-responsive-navigation" class="dl-menuwrapper">
+          <button class="dl-trigger">Open Menu</button>
+          <ul class="dl-menu">
+            <li class="active">
+              <a class="active" href="index.html">Home</a>
+            </li>
+            <li class="menu-item kode-parent-menu">
+              <a href="{% url 'post_list' category='news' %}">>News</a>
+            </li>
+            <li class="menu-item kode-parent-menu">
+              <a href="{% url 'post_list' category='sports' %}">>Sports</a>
+            </li>
+            <li class="menu-item kode-parent-menu">
+              <a href="{% url 'post_list' category='business' %}">>Business</a>
+            </li>
+            <li class="menu-item kode-parent-menu">
+              <a href="{% url 'post_list' category='entertainment' %}">>entertainment</a>
+            </li>
+            <li class="menu-item kode-parent-menu">
+              <a href="{% url 'post_list' category='travel' %}">>Travel</a>
+            </li>
+            <li><a href="contact-us.html">contact Us</a></li>
+          </ul>
+        </div>
+        <!--DL Menu END-->
+        <form method="get" action="{% url 'search' %}" class="comment_form">
+          <div class="kf_commet_field">
+            <input
+              placeholder="Type Keyword"
+              name="q"
+              type="text"
+              value=""
+              data-default="Name*"
+              size="30"
+              required
+            />
+            <button><i class="fa fa-search"></i></button>
+          </div>
+        </form>
+      </div>
+      <!--KF NAVIGATION ROW END-->
+    </div>
+  </div>
+  <!--KF NAVI WRAP END-->
+</header>

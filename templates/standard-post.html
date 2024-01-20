@@ -1,0 +1,578 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Standard post</title>
+    <!-- Bootstrap -->
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" />
+    <!-- Font-awesome -->
+    <link href="{% static 'css/font-awesome.css' %}" rel="stylesheet" />
+    <!-- Bootstrap -->
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" />
+    <!-- Slick Slider -->
+    <link href="{% static 'css/slick.css' %}" rel="stylesheet" />
+    <!-- Slick Slider -->
+    <link href="{% static 'css/prettyphoto.css' %}" rel="stylesheet" />
+    <!-- Typography -->
+    <link href="{% static 'css/index.css' %}" rel="stylesheet" />
+    <!-- Typography -->
+    <link href="{% static 'css/typography.css' %}" rel="stylesheet" />
+    <!-- widget.css -->
+    <link href="{% static 'css/side-widget.css' %}" rel="stylesheet" />
+    <!-- component-responsive.css -->
+    <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+    <!-- component-responsive.css -->
+    <link href="{% static 'css/component.css' %}" rel="stylesheet" />
+    <!-- shortcodes.css -->
+    <link href="{% static 'css/shortcodes.css' %}" rel="stylesheet" />
+    <!-- colors.css -->
+    <link href="{% static 'css/colors.css' %}" rel="stylesheet" />
+    <!-- style.css -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- wrapper-->
+    <div class="wrapper">
+      <!--header-->
+      {% include 'header.html' %}
+
+
+      <!--CONTENT START-->
+      {% block content %}
+      <div class="content">
+        <div class="container">
+          <div class="detail_row">
+            <div class="kf_detail_text">
+              <a class="theam_btn" href="#">Travel</a>
+              <h2>{{post.title}}</h2>
+              <ul class="bit_meta meta_2 meta_3">
+                <li>
+                  <a href="#"
+                    ><i class="fa fa-calendar-check-o"></i
+                    >{{post.timestamp|date:'F j, Y' }}</a
+                  >
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-user"></i>{{post.author}}</a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-eye"></i>{{post.views_count}}</a>
+                </li>
+              </ul>
+            </div>
+            <div class="kf_detail_slide">
+              <div class="kf_detail_fig">
+                <figure class="overlay">
+                  <img
+                    src="{% static 'extra-images/blog-detail11.jpg' %}"
+                    alt=""
+                  />
+                  <figcaption>
+                    <span>25</span>
+                    <strong>July</strong>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-9">
+                <div class="kf_detail_list">
+                  <p>{{post.description}}</p>
+                  <blockquote>
+                    <h3>{{post.title}}</h3>
+                  </blockquote>
+                  <div class="kf_detail_caption">
+                    <figure>
+                      <img
+                        src="{{post.thumbnail_url}}"
+                        alt=""
+                      />
+                    </figure>
+                    
+                  </div>
+                  <div class="kf_detail_deta">
+                    
+
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="text">
+                          {{post.description|safe}}
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="thumb">
+                          <figure>
+                            <img
+                              src="{{post.thumbnail_url}}"
+                              alt=""
+                            />
+                          </figure>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="blog_meta_list">
+                    <a href=""
+                      ><i class="fa fa-share"></i>
+                      <h5>Share This Post :</h5></a
+                    >
+                    <ul class="kf_share_link">
+                      <li>
+                        <a class="theam_btn_large blue" href="#"
+                          ><i class="fa fa-facebook"></i>Facebok</a
+                        ><a class="theam_btn_large light_blue" href="#"
+                          ><i class="fa fa-twitter"></i>Twitter</a
+                        ><a class="theam_btn_large blue_white" href="#"
+                          ><i class="fa fa-linkedin"></i>linked In</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="kf_detail_post">
+                    <ul>
+<li>
+            {% if post.get_previous %}
+                <a href="{{ post.get_previous.get_absolute_url }}">
+                    <i class="fa fa-angle-double-left"></i> Previous Post
+                </a>
+                <p>{{ post.get_previous.title }}</p>
+            {% endif %}
+        </li>
+        <li class="next">
+            {% if post.get_next %}
+                <a href="{{ post.get_next.get_absolute_url }}">
+                    Next Post <i class="fa fa-angle-double-right"></i>
+                </a>
+                <p>{{ post.get_next.title }}</p>
+            {% endif %}
+        </li>
+                    </ul>
+                  </div>
+
+                  <div class="kf_like_post">
+                    <h3 class="comment_title">You May Also Like</h3>
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="kf_blog_medium grid">
+                          <figure>
+                            <img
+                              src="{% static 'extra-images/blog_grid.jpg' %}"
+                              alt=""
+                            />
+                          </figure>
+                          <div class="kf_blog_text">
+                            <h6>
+                              <a href="#"
+                                >Business Conference<br />
+                                Meeting held</a
+                              >
+                            </h6>
+                            <p>
+                              Sed cursus eget risus non vestibulum Sed in
+                              molestie..
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="kf_blog_medium grid">
+                          <figure>
+                            <img
+                              src="{% static 'extra-images/blog_grid1.jpg' %}"
+                              alt=""
+                            />
+                          </figure>
+                          <div class="kf_blog_text">
+                            <h6>
+                              <a href="#"
+                                >Business Conference<br />
+                                Meeting held</a
+                              >
+                            </h6>
+                            <p>
+                              Sed cursus eget risus non vestibulum Sed in
+                              molestie..
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="kf_blog_medium grid">
+                          <figure>
+                            <img
+                              src="{% static 'extra-images/blog_grid2.jpg' %}"
+                              alt=""
+                            />
+                          </figure>
+                          <div class="kf_blog_text">
+                            <h6>
+                              <a href="#"
+                                >Business Conference<br />
+                                Meeting held</a
+                              >
+                            </h6>
+                            <p>
+                              Sed cursus eget risus non vestibulum Sed in
+                              molestie..
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <div class="col-md-3">
+                <!--SIDE BAR WRAP START-->
+                <div class="side_bar_wrap">
+                  <div class="kf_top_story">
+                    <div class="section_heading hdg_2">
+                      <h2 class="font_size">About Us</h2>
+                      <span></span>
+                    </div>
+                  </div>
+                  <div class="kf_side_fig">
+                    <figure>
+                      <img
+                        src="{% static 'extra-images/side-blog.jpg' %}"
+                        alt=""
+                      />
+                    </figure>
+                    <div class="kf_side_fig_text">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing
+                        elit, sed diam is theis nonummy nibh...
+                      </p>
+                    </div>
+                  </div>
+
+                  <!--KF SELLING ADD OVERLAY START-->
+                  <div class="kf_selling_add overlay">
+                    <h3>Best Selling WordPress Theme</h3>
+                    <h3>Banner Area</h3>
+                    <h3>269 x 292</h3>
+                    <a class="theam_btn_large theam_bg_color" href="#"
+                      >Purchase Now</a
+                    >
+                  </div>
+                  <!--KF SELLING ADD OVERLAY END-->
+                  <div class="kf_blog_list margin-30">
+                    <div class="kf_top_story">
+                      <div class="section_heading hdg_2">
+                        <h2 class="font_size">Recent Post</h2>
+                        <span></span>
+                      </div>
+                    </div>
+                    <ul>
+                      <li>
+                        <div class="kf_blog_modren">
+                          <figure>
+                            <img
+                              src="{% static 'extra-images/side-list-fig.jpg' %}"
+                              alt=""
+                            />
+                          </figure>
+                          <div class="kf_blog_modren_text">
+                            <h6>Pound volatile after Bank vote</h6>
+                            <ul class="bit_meta meta_2 meta_4">
+                              <li>
+                                <a href="#"
+                                  ><i class="fa fa-user"></i>John Throat</a
+                                >
+                              </li>
+                              <li>
+                                <a href="#"
+                                  ><i class="fa fa-calendar-check-o"></i>3
+                                  Months</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="kf_blog_modren">
+                          <figure>
+                            <img
+                              src="{% static 'extra-images/side-list-fig1.jpg' %}"
+                              alt=""
+                            />
+                          </figure>
+                          <div class="kf_blog_modren_text">
+                            <h6>Pound volatile after Bank vote</h6>
+                            <ul class="bit_meta meta_2 meta_4">
+                              <li>
+                                <a href="#"
+                                  ><i class="fa fa-user"></i>John Throat</a
+                                >
+                              </li>
+                              <li>
+                                <a href="#"
+                                  ><i class="fa fa-calendar-check-o"></i>3
+                                  Months</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="kf_blog_modren">
+                          <figure>
+                            <img
+                              src="{% static 'extra-images/side-list-fig2.jpg' %}"
+                              alt=""
+                            />
+                          </figure>
+                          <div class="kf_blog_modren_text">
+                            <h6>Pound volatile after Bank vote</h6>
+                            <ul class="bit_meta meta_2 meta_4">
+                              <li>
+                                <a href="#"
+                                  ><i class="fa fa-user"></i>John Throat</a
+                                >
+                              </li>
+                              <li>
+                                <a href="#"
+                                  ><i class="fa fa-calendar-check-o"></i>3
+                                  Months</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="kf_blog_modren">
+                          <figure>
+                            <img
+                              src="{% static 'extra-images/side-list-fig3.jpg' %}"
+                              alt=""
+                            />
+                          </figure>
+                          <div class="kf_blog_modren_text">
+                            <h6>Pound volatile after Bank vote</h6>
+                            <ul class="bit_meta meta_2 meta_4">
+                              <li>
+                                <a href="#"
+                                  ><i class="fa fa-user"></i>John Throat</a
+                                >
+                              </li>
+                              <li>
+                                <a href="#"
+                                  ><i class="fa fa-calendar-check-o"></i>3
+                                  Months</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <!--KF SOCIAL LIST START-->
+                  <div class="kf_social_list">
+                    <ul>
+                      <li>
+                        <div class="kf_social_detail">
+                          <a class="twitter" href="#"
+                            ><i class="fa fa-twitter"></i
+                          ></a>
+                          <div class="kf_social_text">
+                            <h6>2,226</h6>
+                            <span><a href="#">Followers</a></span>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="kf_social_detail">
+                          <a class="facebook" href="#"
+                            ><i class="fa fa-facebook"></i
+                          ></a>
+                          <div class="kf_social_text">
+                            <h6>4,850</h6>
+                            <span><a href="#">Likes</a></span>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="kf_social_detail">
+                          <a class="dribbble" href="#"
+                            ><i class="fa fa-dribbble"></i
+                          ></a>
+                          <div class="kf_social_text">
+                            <h6>2,354</h6>
+                            <span><a href="#">Followers</a></span>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="kf_social_detail">
+                          <a class="rss" href="#"><i class="fa fa-rss"></i></a>
+                          <div class="kf_social_text">
+                            <h6>5,980</h6>
+                            <span><a href="#">Followers</a></span>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <!--KF SOCIAL LIST END-->
+                  <!--Category Wrap Start-->
+                  <div class="aladin_aside_category aside_hdg_1">
+                    <div class="kf_top_story">
+                      <div class="section_heading hdg_2">
+                        <h2 class="font_size">Categories</h2>
+                        <span></span>
+                      </div>
+                    </div>
+                    <ul>
+                      <li><a href="#">Business</a><span>(02)</span></li>
+                      <li><a href="#">Corporate</a><span>(03)</span></li>
+                      <li><a href="#">World</a><span>(04)</span></li>
+                      <li><a href="#">Travel Business</a><span>(05)</span></li>
+                    </ul>
+                  </div>
+                  <!--Category Wrap End-->
+                </div>
+                <!--SIDE BAR WRAP END-->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--KF INSTAGRAM WRAP START-->
+        <div class="kf_instagram_wrap">
+          <div class="instagram-slide">
+            <div>
+              <div class="kf_instagram_fig">
+                <figure>
+                  <img src="{% static 'extra-images/slide.jpg' %}" alt="" />
+                </figure>
+              </div>
+            </div>
+            <div>
+              <div class="kf_instagram_fig">
+                <figure>
+                  <img src="{% static 'extra-images/slide1.jpg' %}" alt="" />
+                </figure>
+              </div>
+            </div>
+            <div>
+              <div class="kf_instagram_fig">
+                <figure>
+                  <img src="{% static 'extra-images/slide2.jpg' %}" alt="" />
+                </figure>
+              </div>
+            </div>
+            <div>
+              <div class="kf_instagram_fig">
+                <figure>
+                  <img src="{% static 'extra-images/slide3.jpg' %}" alt="" />
+                </figure>
+              </div>
+            </div>
+            <div>
+              <div class="kf_instagram_fig">
+                <figure>
+                  <img src="{% static 'extra-images/slide4.jpg' %}" alt="" />
+                </figure>
+              </div>
+            </div>
+            <div>
+              <div class="kf_instagram_fig">
+                <figure>
+                  <img src="{% static 'extra-images/slide5.jpg' %}" alt="" />
+                </figure>
+              </div>
+            </div>
+            <div>
+              <div class="kf_instagram_fig">
+                <figure>
+                  <img src="{% static 'extra-images/slide5.jpg' %}" alt="" />
+                </figure>
+              </div>
+            </div>
+          </div>
+          <a class="kf_instagram_btn theam_btn_large theam_bg_color" href="#"
+            >Follow @ Instagram</a
+          >
+        </div>
+        <!--KF INSTAGRAM WRAP END-->
+
+        <!--KF NEWSLETTER WRAP START-->
+        <div class="kf_newsletter_wrap">
+          <div class="container">
+            <div class="kf_newsletter_text">
+              <h2>Stay Connected With Us</h2>
+              <ul class="top_icon icon_2">
+                <li>
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-dribbble"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-rss"></i></a>
+                </li>
+              </ul>
+              <div class="kf_comment_form">
+                <h4>Post Your Comment</h4>
+                <form method="post" class="comment_form">
+                  <div class="kf_commet_field">
+                    <input
+                      placeholder="Your Email"
+                      name="url"
+                      type="text"
+                      value=""
+                      required
+                    />
+                  </div>
+                  <p class="form-submit">
+                    <input
+                      name="submit"
+                      type="submit"
+                      class="theam_btn"
+                      value="Submit"
+                    />
+                  </p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--KF NEWSLETTER WRAP END-->
+      </div>
+
+      {% endblock content %}
+      <!--CONTENT END-->
+
+      {% include 'footer.html' %}
+
+    </div>
+    <!-- jquery javascript-->
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <!-- Bootstrap script-->
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <!-- responsive-jquery script-->
+    <!-- responsive-jquery script-->
+    <script src="{% static 'js/jquery.mkinfinite.js' %}"></script>
+    <!-- responsive-jquery script-->
+    <script src="{% static 'js/modernizr.custom.js' %}"></script>
+    <!-- responsive-jquery script-->
+    <script src="{% static 'js/jquery.dlmenu.js' %}"></script>
+    <!-- Slick Slider script-->
+    <script src="{% static 'js/slick.js' %}"></script>
+    <!-- Custom scripts-->
+    <script src="{% static 'js/custom.js' %}"></script>
+  </body>
+</html>

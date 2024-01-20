@@ -1,0 +1,730 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Home Page</title>
+    <!-- Bootstrap -->
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" />
+    <!-- Font-awesome -->
+    <link href="{% static 'css/font-awesome.css' %}" rel="stylesheet" />
+    <!-- Bootstrap -->
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" />
+    <!-- Slick Slider -->
+    <link href="{% static 'css/slick.css' %}" rel="stylesheet" />
+    <!-- Slick Slider -->
+    <link href="{% static 'css/prettyphoto.css' %}" rel="stylesheet" />
+    <!-- Typography -->
+    <link href="{% static 'css/typography.css' %}" rel="stylesheet" />
+    <!-- widget.css -->
+    <link href="{% static 'css/side-widget.css' %}" rel="stylesheet" />
+    <!-- component-responsive.css -->
+    <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+    <!-- component-responsive.css -->
+    <link href="{% static 'css/component.css' %}" rel="stylesheet" />
+    <!-- shortcodes.css -->
+    <link href="{% static 'css/shortcodes.css' %}" rel="stylesheet" />
+    <!-- colors.css -->
+    <link href="{% static 'css/colors.css' %}" rel="stylesheet" />
+    <!-- style.css -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- wrapper-->
+    <div class="wrapper">
+      <!--header-->
+      {% include "header.html" %}
+
+
+      <!--CONTENT START-->
+      <div class="content">
+        <!--KF BIT COIN START-->
+        <div class="kf_bit_coin">
+          <div class="container">
+            <div class="kf_bit_coin_row">
+              <div class="kf-bit-row-slide">
+                <div>
+                  {% if news_list %} {% with first_post=news_list.0 %}
+                  <div class="kf_bit_fig">
+                    <figure class="overlay">
+                      <img
+                        src="https://i.stack.imgur.com/TsSNq.png"
+                        alt="{{first_post.title }}"
+                        style="width: 675px; height: 425px; object-fit: cover"
+                      />
+
+                      <figcaption class="bit_caption">
+                        <a
+                          class="theam_btn margin-bottom"
+                          href="{{ first_post.category.get_absolute_url }}"
+                          >{{ first_post.category }}</a
+                        >
+                        <h2>
+                          <a href="{{ first_post.get_absolute_url }}"
+                            >{{ first_post.title }}</a
+                          >
+                        </h2>
+                        <ul class="bit_meta">
+                          <li>{{ first_post.timestamp|date:'F j, Y' }}</li>
+                          <li>
+                            <a href="#"
+                              ><i class="fa fa-eye"></i
+                              >{{first_post.views_count}}</a
+                            >
+                          </li>
+                          <!-- Add more details as needed -->
+                        </ul>
+                      </figcaption>
+                    </figure>
+                  </div>
+                  {% endwith %} {% else %}
+                  <p>No posts available</p>
+                  {% endif %}
+
+                  <div class="kf_bit_side">
+                    {% for heroposts in featured_home_list|slice:"1:3" %}
+                    <div class="kf_bit_fig">
+                      <figure class="overlay">
+                        <img src="{{heroposts.thumbnail}}" alt="" style="width: 490px; height: 209px; object-fit: cover;">
+                        <figcaption class="bit_caption">
+                          <a class="theam_btn margin-bottom" href="#">{{heroposts.category}}</a>
+                          <h3><a href=">{{heroposts.get_absolute_url}}">{{heroposts.title}}</a></h3>
+                          <ul class="bit_meta">
+                            <li>by {{heroposts.author}}</li>
+                            <li><a href="#"><i class="fa fa-clock-o"></i>{{heroposts.timestamp|date:'F j, Y' }}</a></li>
+                            <li><a href="#"><i class="fa fa-share-alt"></i>{{heroposts.views_count}}</a></li>
+                          </ul>
+                        </figcaption>
+                      </figure>
+                    </div>
+                    {% endfor %}
+
+                  </div>
+                </div>
+              </div>
+              <div class="kf_arrow">
+                <a href="#">10 OF 3</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--KF BIT COIN END-->
+
+        <!--KF BIT BUSINESS START-->
+        <div class="kf_bit_business">
+          <div class="container">
+            <div class="row">
+              {% for heroposts in featured_home_list|slice:"2:5" %}
+              <div class="col-md-4">
+                <div class="kf_bit_fig fig_2">
+                  <figure class="overlay">
+                    <img
+                      src="{{heroposts.thumbnail}}"
+                      alt=""
+                      style="width: 382px; height: 213px; object-fit: cover"
+                    />
+                    <figcaption class="bit_caption">
+                      <a class="theam_color" href="#">{{heroposts.category }}</a>
+                      <h4>
+                        <a href="{{ heroposts.get_absolute_url }}">{{ heroposts.title }}</a>
+                      </h4>
+                      <ul class="bit_meta meta_2">
+                        <li>
+                          <a href="#"
+                            ><i class="fa fa-calendar-check-o"></i>{{heroposts.timestamp|date:'F j, Y' }}</a
+                          >
+                        </li>
+                        <li>
+                          <a href="#"
+                            ><i class="fa fa-user"></i>{{heroposts.author}}</a
+                          >
+                        </li>
+                      </ul>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              {% endfor %}
+
+            </div>
+          </div>
+        </div>
+        <!--KF BIT BUSINESS END-->
+
+        <!--KF MAGZINE ADD START-->
+        <div class="kf_magazine_add">
+          <div class="container">
+            <div class="kf_banner_add add_2 overlay">
+              <div class="kf_add_text">
+                <h5>Best Business ,<br />News Magazine</h5>
+              </div>
+              <div class="kf_add_content">
+                <h3>Banner Ad</h3>
+                <span>760 x 90</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--KF MAGZINE ADD END-->
+
+        <!--KF MAGZINE LIST START-->
+        <div class="kf_magazine_list">
+          <!--CONTAINER START-->
+          <div class="container">
+            <div class="col-md-9 responsive_padding">
+              <!--KF MAGZINE ROW START-->
+              <div class="kf_magazine_row">
+                <div class="kf_top_story">
+                  <div class="section_heading">
+                    <h2>Sports</h2>
+                    <span></span>
+                  </div>
+                </div>
+                <div class="row">
+                  {% if sports_list %} {% with first_post=sports_list.0 %}
+                  <div class="col-md-8">
+                    <div class="kf_blog_medium">
+                      <figure class="overlay">
+                        <img
+                          src="{{first_post.thumbnail}}" style="width: 570px; height: 319px; object-fit: cover;"
+                          alt=""
+                        />
+                        <a class="bf_busines theam_btn_medium" href="{{first_post.get_absolute_url}}"
+                          >{{first_post.category}}</a
+                        >
+                        <ul class="bit_meta meta_2 meta_3">
+                          <li>
+                            <a href="#"
+                              ><i class="fa fa-user"></i>{{first_post.author}}</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#"
+                              ><i class="fa fa-calendar-check-o"></i>{{first_post.timestamp|date:'F j, Y' }}</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#"
+                              ><i class="fa fa-comments"></i>{{first_post.views_count}}</a
+                            >
+                          </li>
+                        </ul>
+                      </figure>
+                      <div class="kf_blog_text">
+                        <h4>
+                          {{first_post.title}}
+                        </h4>
+                        <p>
+                          {{first_post.overview}}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  {% endwith %} {% else %}
+                  <p>No posts available</p>
+                  {% endif %}
+
+                  <div class="col-md-4">
+                    <div class="kf_blog_list">
+                      <ul>
+                        {% for sportspost in sports_list|slice:"1:6" %}
+                        <li>
+                          <div class="kf_blog_modren">
+                            <figure class="overlay">
+                              <img
+                                src="{{sportspost.thumbnail}}" style="width: 90px; height: 70px; object-fit: cover;"
+                                alt=""
+                              />
+                            </figure>
+                            <div class="kf_blog_modren_text">
+                              <h6><a href="{{sportspost.get_absolute_url}}">{{sportspost.title|slice:":255" }}</a></h6>
+                              <ul class="bit_meta meta_2 meta_4">
+                                <li>
+                                  <a href="#"
+                                    ><i class="fa fa-calendar-check-o"></i>{{sportspost.author }}</a
+                                  >
+                                </li>
+                                <li>
+                                  <a href="#"
+                                    ><i class="fa fa-comments"></i>{{sportspost.timestamp|date:'F j, Y' }}</a
+                                  >
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </li>
+                        {% endfor %}
+
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--KF MAGZINE ROW END-->
+
+              <!--KF MAGZAINE ROW START-->
+              <div class="kf_magazine_row">
+                <div class="kf_top_story">
+                  <div class="section_heading">
+                    <h2>Business World</h2>
+                    <span></span>
+                  </div>
+                </div>
+                <div class="row">
+                  {% if business_list %}
+                  {% for business in business_list|slice:"0:6" %}
+                  <div class="col-md-4 col-sm-6">
+                    <div class="kf_blog_medium grid">
+                      <figure>
+                        <img
+                          src="{{business.thumbnail_url}}" style="width: 269px; height: 212px; object-fit: cover;"
+                          alt=""
+                        />
+                      </figure>
+                      <div class="kf_blog_text">
+                        <h6>
+                          <a href="{{business.get_absolute_url}}"
+                            >{{business.title|slice:":255" }}</a
+                          >
+                        </h6>
+                        <p>
+                          {{sportspost.overview|slice:":355" }}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  {% endfor %}
+
+                  {% else %}
+                  <p>No Posts available</p>
+                  {% endif %}
+
+                </div>
+
+                <div class="kf_banner_add add_2 overlay">
+                  <div class="kf_add_text">
+                    <h5>Best Business ,<br />News Magazine</h5>
+                  </div>
+                  <div class="kf_add_content">
+                    <h3>Banner Ad</h3>
+                    <span>760 x 90</span>
+                  </div>
+                </div>
+              </div>
+              <!--KF MAGZAINE ROW END-->
+            </div>
+
+            <div class="col-md-3 responsive_padding">
+              <!--SIDE BAR WRAP START-->
+              <div class="side_bar_wrap">
+                <!--KF SOCIAL LIST START-->
+                <div class="kf_social_list">
+                  <ul>
+                    <li>
+                      <div class="kf_social_detail">
+                        <a class="twitter" href="#"
+                          ><i class="fa fa-twitter"></i
+                        ></a>
+                        <div class="kf_social_text">
+                          <h6>2,226</h6>
+                          <span><a href="#">Followers</a></span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="kf_social_detail">
+                        <a class="facebook" href="#"
+                          ><i class="fa fa-facebook"></i
+                        ></a>
+                        <div class="kf_social_text">
+                          <h6>4,850</h6>
+                          <span><a href="#">Likes</a></span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="kf_social_detail">
+                        <a class="dribbble" href="#"
+                          ><i class="fa fa-dribbble"></i
+                        ></a>
+                        <div class="kf_social_text">
+                          <h6>2,354</h6>
+                          <span><a href="#">Followers</a></span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="kf_social_detail">
+                        <a class="rss" href="#"><i class="fa fa-rss"></i></a>
+                        <div class="kf_social_text">
+                          <h6>5,980</h6>
+                          <span><a href="#">Followers</a></span>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <!--KF SOCIAL LIST END-->
+
+                <!--KF ADD LOGO START-->
+                <div class="kf_add_logo">
+                  <a href="#"
+                    ><img src="{% static 'images/add-logo.png' %}" alt=""
+                  /></a>
+                  <h5>Stay News updated with our Whatsapp Community</h5>
+                  <a class="arrow_down" href="#"
+                    ><img src="{% static 'images/arrow.png' %}" alt=""
+                  /></a>
+                  <div class="full_width">
+                    <a class="theam_btn_medium" href="#">Join Now!</a>
+                  </div>
+                </div>
+                <!--KF ADD LOGO END-->
+
+                <!--KF SIDE TABS START-->
+                <div class="kf_side_tabs">
+                  <div class="panel panel-default">
+                    <ul class="kf_tabs_list nav-tabs">
+                      <li><a href="#tab" data-toggle="tab">Recent</a></li>
+                      <li><a href="#tab1" data-toggle="tab">Popular</a></li>
+                    </ul>
+                    <div class="panel-body">
+                      <div class="tab-content">
+                        <div class="tab-pane fade in active" id="tab">
+                          {% for news in recent|slice:"0:4" %}
+                          <div class="kf_tabs_des">
+                            <figure class="overlay">
+                              <img
+                                src="{{news.thumbnail}}" style="width: 270px; height: 147px; object-fit: cover;"
+                                alt=""
+                              />
+                            </figure>
+                            <div class="kf_tabs_text">
+                              <a href="{{ news.get_absolute_url }}">{{ forloop.counter }}</a>
+                              <h6>{{news.title|slice:":35" }}</h6>
+                            </div>
+                          </div>
+                          {% endfor %}
+
+                        </div>
+                        <div class="tab-pane fade in" id="tab1">
+                          {% for news in popular|slice:"0:4" %}
+                          <div class="kf_tabs_des">
+                            <figure class="overlay">
+                              <img
+                                src="{{news.thumbnail}}" style="width: 270px; height: 147px; object-fit: cover;"
+                                alt=""
+                              />
+                            </figure>
+                            <div class="kf_tabs_text">
+                              <a href="{{ news.get_absolute_url }}">{{ forloop.counter }}</a>
+                              <h6>{{news.title|slice:":35"}}</h6>
+                            </div>
+                          </div>
+                          {% endfor %}
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--KF SIDE TABS END-->
+              </div>
+              <!--SIDE BAR WRAP END-->
+            </div>
+          </div>
+          <!--CONTAINER END-->
+        </div>
+        <!--KF MAGZINE LIST END-->
+
+        <!--KF BIT BUSINESS START-->
+        <div class="kf_bit_business bit_2">
+          <div class="container">
+            <div class="section_heading hdg_1">
+              <h2>Top Hot News</h2>
+              <span></span>
+            </div>
+            <div class="kf-slider-bitcoin">
+              {% if entertainment_list %}
+              {% for news in entertainment_list|slice:"0:5" %}
+              <div>
+                <div class="kf_bit_fig fig_2">
+                  <figure class="overlay">
+                    <img
+                      src="{{news.thumbnail}}" style="width: 382px; height: 213px; object-fit:cover;"
+                      alt=""
+                    />
+                    <figcaption class="bit_caption">
+                      <a class="theam_color" href="#">{{news.category}}</a>
+                      <h4>
+                        <a href="#">{{news.title}}</a>
+                      </h4>
+                      <ul class="bit_meta meta_2">
+                        <li>
+                          <a href="#"
+                            ><i class="fa fa-calendar-check-o"></i>{{news.timestamp|date:'F j, Y' }}</a
+                          >
+                        </li>
+                        <li>
+                          <a href="#"
+                            ><i class="fa fa-user"></i>{{news.author}}</a
+                          >
+                        </li>
+                      </ul>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              {% endfor %}
+              {% else %}
+              <p>No posts available</p>
+              {% endif %}
+
+            </div>
+          </div>
+        </div>
+        <!--KF BIT BUSINESS END-->
+
+        <!--KF FAMOUS NEWS START-->
+        <div class="kf_famous_news">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-9">
+                <div class="section_heading">
+                  <h2>Travel News</h2>
+                  <span></span>
+                </div>
+                {% if travel_list %}
+
+                {% for news in travel_list|slice:"0:6" %}
+                <div class="kf_news_list">
+                  <figure>
+                      <img src="{{news.thumbnail}}" style="width: 255px; height: 183px; object-fit:cover;" alt="" />
+                  </figure>
+                  <div class="kf_news_text">
+                    <a class="theam_color" href="#">{{news.category}}</a>
+                    <h4>{{news.title}}</h4>
+                    <ul class="bit_meta meta_2 meta_5">
+                      <li>
+                        <a href="#"
+                          ><i class="fa fa-calendar-check-o"></i>{{news.timestamp|date:'F j, Y' }}</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#"><i class="fa fa-user"></i>{{news.author}}</a>
+                      </li>
+                    </ul>
+                    <p>
+                      {{news.overview}}
+                    </p>
+                  </div>
+                </div>
+                {% endfor %}
+                {% else %}
+                <p>No Posts available</p>
+                {% endif %}
+
+              </div>
+              <div class="col-md-3">
+                <!--SIDE BAR WRAP START-->
+                <div class="side_bar_wrap">
+                  <!--KF SIDE FORM START-->
+                  <div class="kf_side_form">
+                    <a href="#"><i class="fa fa-envelope"></i></a>
+                    <h6>Subscribe us Get the latest updates & news</h6>
+                    <form method="post" class="comment_form">
+                      <div class="kf_commet_field">
+                        <input
+                          placeholder="Your Email Adress"
+                          name="author"
+                          type="text"
+                          value=""
+                          data-default="Name*"
+                          size="30"
+                          required
+                        />
+                      </div>
+                      <p class="form-submit">
+                        <input
+                          name="submit"
+                          type="submit"
+                          class="submit"
+                          value="Subscribe Us"
+                        />
+                      </p>
+                    </form>
+                  </div>
+                  <!--KF SIDE FORM END-->
+
+                  <!--KF SELLING ADD OVERLAY START-->
+                  <div class="kf_selling_add overlay">
+                    <h3>Best Selling WordPress Theme</h3>
+                    <h3>Banner Area</h3>
+                    <h3>269 x 292</h3>
+                    <a class="theam_btn_medium" href="#">Purchase Now</a>
+                  </div>
+                  <!--KF SELLING ADD OVERLAY END-->
+
+                  <!--KF SIDE LATEST START-->
+                  <div class="kf_side_latest">
+                    <div class="section_heading">
+                      <h2>Latest Pools</h2>
+                      <span></span>
+                    </div>
+                    <div class="kf_latest_radio">
+                      <h5>Which Is top Most big firm in 2016</h5>
+                      <ul class="radio_points">
+                        <li>
+                          <div class="checkbox_radio">
+                            <input type="radio" name="one" id="radio1" />
+                            <span></span>
+                            <label for="radio1">Arthur Andersen</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="checkbox_radio">
+                            <input type="radio" name="one" id="radio2" />
+                            <span></span>
+                            <label for="radio2">KPMG</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="checkbox_radio">
+                            <input type="radio" name="one" id="radio3" />
+                            <span></span>
+                            <label for="radio3">Ernst & Young</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="checkbox_radio">
+                            <input type="radio" name="one" id="radio4" />
+                            <span></span>
+                            <label for="radio4">Ernst & Young</label>
+                          </div>
+                        </li>
+                      </ul>
+                      <a class="theam_btn_medium" href="#">Vote</a>
+                    </div>
+                  </div>
+                  <!--KF SIDE LATEST END-->
+                </div>
+                <!--SIDE BAR WRAP END-->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--KF FAMOUS NEWS END-->
+
+        <!--KF INSTAGRAM WRAP START-->
+        <div class="kf_instagram_wrap">
+          <div class="instagram-slide">
+            <div>
+              <div class="kf_instagram_fig">
+                <figure>
+                  <img src="{% static 'extra-images/slide.jpg' %}" alt="" />
+                </figure>
+              </div>
+            </div>
+            <div>
+              <div class="kf_instagram_fig">
+                <figure>
+                  <img src="{% static 'extra-images/slide1.jpg' %}" alt="" />
+                </figure>
+              </div>
+            </div>
+            <div>
+              <div class="kf_instagram_fig">
+                <figure>
+                  <img src="{% static 'extra-images/slide2.jpg' %}" alt="" />
+                </figure>
+              </div>
+            </div>
+            <div>
+              <div class="kf_instagram_fig">
+                <figure>
+                  <img src="{% static 'extra-images/slide3.jpg' %}" alt="" />
+                </figure>
+              </div>
+            </div>
+            <div>
+              <div class="kf_instagram_fig">
+                <figure>
+                  <img src="{% static 'extra-images/slide4.jpg' %}" alt="" />
+                </figure>
+              </div>
+            </div>
+            <div>
+              <div class="kf_instagram_fig">
+                <figure>
+                  <img src="{% static 'extra-images/slide5.jpg' %}" alt="" />
+                </figure>
+              </div>
+            </div>
+            <div>
+              <div class="kf_instagram_fig">
+                <figure>
+                  <img src="{% static 'extra-images/slide5.jpg' %}" alt="" />
+                </figure>
+              </div>
+            </div>
+          </div>
+          <a class="kf_instagram_btn theam_btn_large theam_bg_color" href="#"
+            >Follow @ Instagram</a
+          >
+        </div>
+        <!--KF INSTAGRAM WRAP END-->
+
+        <!--KF NEWSLETTER WRAP START-->
+        <div class="kf_newsletter_wrap">
+          <div class="container">
+            <div class="kf_newsletter_text">
+              <h2>Stay Connected With Us</h2>
+              <ul class="top_icon icon_2">
+                <li>
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-dribbble"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-rss"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!--KF NEWSLETTER WRAP END-->
+      </div>
+      <!--CONTENT END-->
+
+
+      {% include 'footer.html' %}
+    </div>
+    <!--church wrapper ends-->
+    <!-- jquery javascript-->
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <!-- Bootstrap script-->
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <!-- modernizr script-->
+    <script src="{% static 'js/jquery.prettyphoto.js' %}"></script>
+    <!-- responsive-jquery script-->
+    <script src="{% static 'js/jquery.downCount.js' %}"></script>
+    <!-- responsive-jquery script-->
+    <script src="{% static 'js/jquery.mkinfinite.js' %}"></script>
+    <!-- responsive-jquery script-->
+    <script src="{% static 'js/modernizr.custom.js' %}"></script>
+    <!-- responsive-jquery script-->
+    <script src="{% static 'js/jquery.dlmenu.js' %}"></script>
+    <!-- Slick Slider script-->
+    <script src="{% static 'js/slick.js' %}"></script>
+    <!-- Custom scripts-->
+    <script src="{% static 'js/custom.js' %}"></script>
+  </body>
+</html>

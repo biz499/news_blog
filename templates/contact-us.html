@@ -1,0 +1,294 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Contact us page</title>
+    <!-- Bootstrap -->
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" />
+    <!-- Font-awesome -->
+    <link href="{% static 'css/font-awesome.css' %}" rel="stylesheet" />
+    <!-- Bootstrap -->
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" />
+    <!-- Slick Slider -->
+    <link href="{% static 'css/slick.css' %}" rel="stylesheet" />
+    <!-- Slick Slider -->
+    <link href="{% static 'css/prettyphoto.css' %}" rel="stylesheet" />
+    <!-- Typography -->
+    <link href="{% static 'css/index.css' %}" rel="stylesheet" />
+    <!-- Typography -->
+    <link href="{% static 'css/typography.css' %}" rel="stylesheet" />
+    <!-- widget.css -->
+    <link href="{% static 'css/side-widget.css' %}" rel="stylesheet" />
+    <!-- component-responsive.css -->
+    <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+    <!-- component-responsive.css -->
+    <link href="{% static 'css/component.css' %}" rel="stylesheet" />
+    <!-- shortcodes.css -->
+    <link href="{% static 'css/shortcodes.css' %}" rel="stylesheet" />
+    <!-- colors.css -->
+    <link href="{% static 'css/colors.css' %}" rel="stylesheet" />
+    <!-- style.css -->
+    <!-- <link href="{% static 'css/style.css' %}" rel="stylesheet" /> -->
+  </head>
+  <body>
+    <!-- wrapper-->
+    <div class="wrapper">
+      <!--header-->
+      {% include 'header.html' %}
+
+
+      <!--CONTENT START-->
+      <div class="content">
+        <div class="kf_contact_map">
+          <div id="map-canvas" class="map-canvas"></div>
+        </div>
+        <div class="kf_contact_wrap">
+          <!--CONTAINER START-->
+          <div class="container">
+            <div class="kf_about_text">
+              <div class="section_heading hdg_2">
+                <h2>Contact Us</h2>
+                <span></span>
+              </div>
+              <p>
+                Sed cursus eget risus non vestibulum. Sed in molestie elit,
+                vitae leo metus, sed imperdiet lorem fermentum et metus, sed
+                imperdiet non vestibulum. Sed in molestie elit, vitae
+                condimentum jusnean vulputate leo metus, sed imperdiet lorem
+                fermentum et metus, sed imperdiet ursus eget risus non
+                vestibulum. Sed in molestie elit, vitae condimentum justo.
+                Aenean vulputate leo metus, sed imperdiet lorem fermentum et
+                metus, sed imperdiet .
+              </p>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="kf_contact_info">
+                  <ul>
+                    <li>
+                      <div class="kf_contact_list">
+                        <span><i class="fa fa-envelope"></i></span>
+                        <div class="kf_contact_info_txet">
+                          <h5>Mail</h5>
+                          <a href="#">help@blogdesk.com</a>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="kf_contact_list">
+                        <span><i class="fa fa-phone"></i></span>
+                        <div class="kf_contact_info_txet">
+                          <h5>Phone</h5>
+                          <a href="#">+92 - 334 - 2797084</a>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="kf_contact_list">
+                        <span><i class="fa fa-map-marker"></i></span>
+                        <div class="kf_contact_info_txet">
+                          <h5>Address</h5>
+                          <a href="#">30 Ab 1 Johar Town F2 Block D, USA</a>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="kf_leave_comment">
+                  <div class="section_heading hdg_2">
+                    <h2>Leave Message</h2>
+                    <span></span>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="kf_commet_field">
+                        <input
+                          placeholder="Your Name"
+                          name="author"
+                          type="text"
+                          value=""
+                          data-default="Name*"
+                          size="30"
+                          required
+                        />
+                      </div>
+                      <div class="kf_commet_field">
+                        <input
+                          placeholder="Your Email"
+                          name="author"
+                          type="text"
+                          value=""
+                          data-default="Name*"
+                          size="30"
+                          required
+                        />
+                      </div>
+                      <div class="kf_commet_field">
+                        <input
+                          placeholder="Your Phone"
+                          name="author"
+                          type="text"
+                          value=""
+                          data-default="Name*"
+                          size="30"
+                          required
+                        />
+                      </div>
+                      <p class="form-submit contact">
+                        <input
+                          name="submit"
+                          type="submit"
+                          class="theam_btn_large"
+                          value="Send Us Now"
+                        />
+                      </p>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="kf_textarea contact">
+                        <textarea
+                          placeholder="Your Message"
+                          name="comment"
+                        ></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--CONTAINER END-->
+        </div>
+        <!--KF INSTAGRAM WRAP START-->
+        <div class="kf_instagram_wrap">
+          <div class="instagram-slide">
+            <div>
+              <div class="kf_instagram_fig">
+                <figure>
+                  <img src="{% static 'extra-images/slide.jpg' %}" alt="" />
+                </figure>
+              </div>
+            </div>
+            <div>
+              <div class="kf_instagram_fig">
+                <figure>
+                  <img src="{% static 'extra-images/slide1.jpg' %}" alt="" />
+                </figure>
+              </div>
+            </div>
+            <div>
+              <div class="kf_instagram_fig">
+                <figure>
+                  <img src="{% static 'extra-images/slide2.jpg' %}" alt="" />
+                </figure>
+              </div>
+            </div>
+            <div>
+              <div class="kf_instagram_fig">
+                <figure>
+                  <img src="{% static 'extra-images/slide3.jpg' %}" alt="" />
+                </figure>
+              </div>
+            </div>
+            <div>
+              <div class="kf_instagram_fig">
+                <figure>
+                  <img src="{% static 'extra-images/slide4.jpg' %}" alt="" />
+                </figure>
+              </div>
+            </div>
+            <div>
+              <div class="kf_instagram_fig">
+                <figure>
+                  <img src="{% static 'extra-images/slide5.jpg' %}" alt="" />
+                </figure>
+              </div>
+            </div>
+            <div>
+              <div class="kf_instagram_fig">
+                <figure>
+                  <img src="{% static 'extra-images/slide5.jpg' %}" alt="" />
+                </figure>
+              </div>
+            </div>
+          </div>
+          <a class="kf_instagram_btn theam_btn_large theam_bg_color" href="#"
+            >Follow @ Instagram</a
+          >
+        </div>
+        <!--KF INSTAGRAM WRAP END-->
+
+        <!--KF NEWSLETTER WRAP START-->
+        <div class="kf_newsletter_wrap">
+          <div class="container">
+            <div class="kf_newsletter_text">
+              <h2>Stay Connected With Us</h2>
+              <ul class="top_icon icon_2">
+                <li>
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-dribbble"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-rss"></i></a>
+                </li>
+              </ul>
+              <div class="kf_comment_form">
+                <h4>Post Your Comment</h4>
+                <form method="post" class="comment_form">
+                  <div class="kf_commet_field">
+                    <input
+                      placeholder="Your Email"
+                      name="url"
+                      type="text"
+                      value=""
+                      required
+                    />
+                  </div>
+                  <p class="form-submit">
+                    <input
+                      name="submit"
+                      type="submit"
+                      class="theam_btn"
+                      value="Submit"
+                    />
+                  </p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--KF NEWSLETTER WRAP END-->
+      </div>
+      
+      {% include 'footer.html' %}
+
+    </div>
+    <!-- jquery javascript-->
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <!-- Bootstrap script-->
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <!-- responsive-jquery script-->
+    <!-- responsive-jquery script-->
+    <script src="{% static 'js/jquery.mkinfinite.js' %}"></script>
+    <!-- responsive-jquery script-->
+    <script src="{% static 'js/modernizr.custom.js' %}"></script>
+    <!-- responsive-jquery script-->
+    <script src="{% static 'js/jquery.dlmenu.js' %}"></script>
+    <!-- Slick Slider script-->
+    <script src="{% static 'js/slick.js' %}"></script>
+    <!--Map-->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+  </body>
+</html>

@@ -1,0 +1,238 @@
+
+
+/*
+======================================================
+				font color 
+=======================================================
+
+*/
+.kf_widget_text .bit_meta.meta_2.meta_4 li a:hover,
+.kf_menu_dropdown .slick-next:before, 
+.kf_menu_dropdown .slick-prev:before ,
+.kf_menu_dropdown .kf_blog_text a:hover,
+.kf_menu_dropdown .kf_blog_text a i,
+.navigation ul li ul li  a:hover,
+.kf_contact_info_txet a:hover,
+.comment_text h4 a:hover,
+.replay:hover,
+.replay i,
+.kf_post_list a:hover,
+.kf_post_list a i,
+.blog_meta_list > a i,
+.kf_detail_list blockquote:after,
+.kf_detail_list blockquote:before,
+.kf_blog_modren_text h6 a:hover,
+.bit_caption h4 a:hover,
+.kf_bit_fig h3 a:hover,
+.bit_caption h2 a:hover,
+.kf_news_text.text_2 h3 a:hover,
+.aladin_aside_category ul li a:hover,
+.kf_bit_coin_row .slick-prev:hover:before,
+.kf_bit_coin_row .slick-next:hover:before,
+.kf_copyright_text p a,
+.widget_info_text a:hover,
+.widget_info_list i,
+.kf_comment_form .form-submit .theam_btn,
+.checkbox_radio label:hover,
+.bit_meta.meta_2.meta_5 li a:hover,
+.kf_social_text span a:hover,
+.kf_blog_text h6 a:hover,
+.bit_meta.meta_2.meta_4 li a:hover,
+.bit_meta.meta_2.meta_3 li a:hover,
+.bit_meta.meta_2 li a i,
+.bit_meta li a:hover,
+.kf_add_content  span{
+	color:#ff1744;
+}
+
+/*
+======================================================
+				background color 
+=======================================================
+
+*/
+.kf_menu_dropdown .slick-next:focus, 
+.kf_menu_dropdown .slick-prev:focus,
+.kf_menu_dropdown .slick-next:hover, 
+.kf_menu_dropdown .slick-prev:hover,
+.theam_bg:before,
+.form-submit.contact .theam_btn_large:hover,
+.kf_contact_list:hover span,
+.kf_about_fig:hover  figure:before,
+.simplefilter.kf_gallery_filter li.active,
+.kf_gallery_fig:hover  figure:before,
+.comment_item:hover  figure:before,
+.thumb:hover figure:before,
+.kf_detail_caption:hover figure:before,
+.kf_detail_news,
+.kf_detail_slide .slick-prev:focus,
+.kf_detail_slide .slick-next:focus,
+.kf_detail_slide .slick-prev:hover,
+.kf_detail_slide .slick-next:hover,
+.kf_detail_fig figcaption,
+.theam_btn_large:hover,
+.kf_side_fig figure,
+.kf_arrow a:hover,
+.kf_tabs_des figure,
+.kf_blog_modren figure,
+.kf_blog_medium figure,
+.kf_news_list figure,
+.kf_instagram_fig figure,
+.checkbox_radio input[type="radio"]:checked ~ span:before,
+.kf_side_form .form-submit .submit,
+.kf_side_form a,
+.kf_bit_business.bit_2 .slick-next:hover, 
+.kf_bit_business.bit_2 .slick-prev:hover,
+.kf_side_tabs  .kf_tabs_list li.active a,
+.kf_tabs_text a,
+.kf_tabs_list li a:hover,
+.kf_tabs_list li a.active,
+.kf_add_logo,
+.theam_btn_medium,
+.bit_caption .theam_btn:hover,
+.theam_btn,
+.kf_commet_field button,
+.navigation ul li a.active,
+.kf_banner_add:after,
+.kf_add_text:before,
+.top_drop_btn .dropdown-menu > li > a:hover,
+.top_icon li a:hover,
+.kf_top_left_text span{
+	background-color:#ff1744;
+}
+/*
+======================================================
+				border color 
+=======================================================
+*/
+.kf_menu_dropdown .slick-next:hover, 
+.kf_menu_dropdown .slick-prev:hover,
+.form-submit.contact .theam_btn_large:hover,
+.kf_contact_list:hover span,
+.kf_textarea textarea:focus,
+.kf_leave_comment .kf_commet_field input:focus,
+.kf_widget_text .kf_commet_field input:focus,
+.kf_comment_form .kf_commet_field input:focus,
+.kf_side_form .kf_commet_field input:focus,
+.kf_commet_field input:focus,
+.kf_top_navi{
+	border-color:#ff1744;
+}
+/*
+======================================================
+				transition color 
+=======================================================
+*/
+.kf_widget_text .bit_meta.meta_2.meta_4 li a,
+.kf_menu_dropdown .slick-next:before, 
+.kf_menu_dropdown .slick-prev:before,
+.kf_menu_dropdown .slick-next, 
+.kf_menu_dropdown .slick-prev,
+.kf_menu_dropdown .kf_blog_text a,
+.navigation ul li ul li  a,
+.navigation ul li > a:before,
+.kf_contact_info_txet a,
+.kf_contact_list span,
+.kf_gallery_filter li,
+.kf_gallery_star li  a,
+.kf_textarea textarea,
+.kf_leave_comment .kf_commet_field input,
+.comment_text h4 a,
+.replay,
+.kf_post_list a,
+.kf_detail_slide .slick-prev,
+.kf_detail_slide .slick-next,
+.kf_instagram_btn.theam_btn_large,
+.kf_blog_modren_text h6 a,
+.bit_caption h4 a,
+.kf_bit_fig h3 a,
+.bit_caption h2 a,
+.theam_btn_large,
+.kf_news_text.text_2 h3 a,
+.aladin_aside_category ul li a,
+.kf_side_fig figure,
+.kf_side_fig figure img,
+.kf_side_fig figure:before,
+.kf_bit_coin_row .slick-prev:before,
+.kf_bit_coin_row .slick-next:before,
+.kf_arrow a,
+.kf_widget_text .kf_commet_field input,
+.widget_info_text a,
+.kf_comment_form .kf_commet_field input,
+.top_icon.icon_2 li a,
+.checkbox_radio label,
+.kf_side_form .kf_commet_field input,
+.bit_meta.meta_2.meta_5 li a,
+.kf_bit_business.bit_2 .slick-next:before, 
+.kf_bit_business.bit_2 .slick-prev:before,
+.kf_bit_business.bit_2 .slick-next, 
+.kf_bit_business.bit_2 .slick-prev,
+.kf_tabs_text a,
+.kf_tabs_list li a,
+.full_width .theam_btn_medium,
+.kf_social_detail > a,
+.kf_social_text span a,
+.kf_blog_text h6 a,
+.kf_blog_modren .overlay:before,
+.kf_blog_modren figure img,
+.bit_meta.meta_2.meta_4 li a,
+.theam_btn_medium,
+.bit_meta.meta_2.meta_3 li a,
+.navigation ul ul ul,
+.navigation ul li ul,
+.bit_meta li a,
+.kf_bit_side .kf_bit_fig img,
+.kf_bit_fig img,
+.bit_caption,
+.kf_busines_fig figcaption  h2 a
+
+{
+
+	-webkit-transition:all 0.3s ease-in-out;
+		-moz-transition:all 0.3s ease-in-out;
+			-ms-transition:all 0.3s ease-in-out;
+				-o-transition:all 0.3s ease-in-out;
+					transition:all 0.3s ease-in-out;
+
+}
+.navigation .kf_menu_dropdown,
+.form-submit.contact .theam_btn_large,
+.kf_about_fig  figure img,
+.kf_about_fig  figure:before,
+.kf_gallery_caption,
+.kf_gallery_rating,
+.kf_gallery_text,
+.kf_gallery_text:after,
+.kf_gallery_text:before,
+.kf_gallery_fig  figure img,
+.kf_gallery_fig  figure:before,
+.comment_item  figure img,
+.comment_item  figure:before,
+.thumb figure img,
+.thumb figure:before,
+.kf_detail_caption figure img,
+.kf_detail_caption figure:before,
+.kf_tabs_des figure:before,
+.kf_blog_modren figure:before,
+.kf_blog_medium figure:before,
+.kf_news_list figure:before,
+.kf_instagram_fig figure:before ,
+.kf_blog_medium .overlay:before,
+.bit_caption .theam_btn,
+input,
+.navigation ul li a,
+.top_drop_btn .dropdown-menu > li > a,
+.top_icon li a{
+	-webkit-transition:all 1s ease-in-out;
+		-moz-transition:all 1s ease-in-out;
+			-ms-transition:all 1s ease-in-out;
+				-o-transition:all 1s ease-in-out;
+					transition:all 1s ease-in-out;
+}
+
+.theam_color{
+	color:#ff1744;
+}
+.theam_bg_color{
+	background-color:#ff1744;
+}

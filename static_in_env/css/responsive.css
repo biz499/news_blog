@@ -1,0 +1,596 @@
+/*============	Media Between Start ============ */
+@media (max-width: 1366px){
+	.kf_bit_coin.coin_2 .kf_bit_fig{
+		margin-right:8.7px;
+	}
+	.content .kf_bit_coin.coin_2 .kf_bit_fig {
+		width:58.3%;
+	}
+	.content .kf_bit_coin.coin_2 .kf_bit_side {
+		width: 41%;
+	}
+	.kf_bit_coin.coin_2.coin_3 .bit_caption {
+		bottom: 15px;
+	}
+	.content .kf_bit_coin.coin_2.coin_3 .kf_bit_side {
+		width: 28.7%;
+	}
+	.content .kf_bit_coin.coin_2.coin_3 .kf_bit_fig{
+		 width: 42.6%;
+	}
+	.kf_gallery_caption h4{
+		font-size:18px;
+	}
+	.content .kf_gallery_list.gallery_3 .kf_gallery_text h4, 
+	.content .kf_gallery_list.gallery_2 .kf_gallery_text h4{
+		font-size:12px;
+	}
+	.kf_gallery_text h6{
+		font-size:14px;
+	}
+}
+
+/*============	Media 940Px Start ============ */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+	.kf_top_right_text span{
+		display:none;
+	}
+	.top_drop_btn .dropdown-menu{
+		left:-150%;
+	}
+	.kf_banner_add  .kf_add_text{
+		width:31%;
+	}
+	.kf_banner_add  .kf_add_content{
+		width:65%;
+	}
+	.kf_commet_field {
+		display: none;
+	}
+	.kf_navigation_row .navigation .kf_menu_dropdown,
+	.kf_navigation_row.navigation {
+		float: left;
+		width: 100%;
+	}
+	.kf_navigation_row .navigation ul > li{
+		margin-right:30px;
+	}
+	.kf_bit_coin_row .kf_bit_side {
+		width: 40.3%;
+	}
+	.kf_bit_coin_row .kf_bit_fig {
+		width: 58.23%;
+	}
+	.kf_bit_fig h3,
+	.bit_caption h2{
+		font-size:20px;
+	}
+	.kf_social_list ul li{
+		margin-right:8px;
+	}
+	.kf_social_text h6{
+		font-size:11px;
+	}
+	.kf_social_text {
+		padding: 5px 0 0 4px;
+	}
+	.kf_social_text  span{
+		font-size:10px;
+	}
+	.bit_meta.meta_2.meta_4 > li:last-child {
+		display: none;
+	}
+	.kf_magazine_row .kf_banner_add.add_2{
+		width:670px;
+	}
+	.kf_bit_fig.fig_2 .bit_meta.meta_2 li {
+		margin-right:10px;
+	}
+	.kf_blog_modren .kf_blog_modren_text h6{
+		font-size:14px;
+	}
+	/* home page 2 start */
+	
+	.content .kf_bit_coin.coin_2 .kf_bit_side {
+		width:40.5%;
+	}
+	.content .kf_bit_coin.coin_2 .kf_bit_fig {
+		width:58.5%;
+	}
+	.content .kf_bit_coin.coin_2 .kf_bit_side .kf_bit_fig{
+		width:100%;
+	}
+	.kf_bit_coin.coin_2.coin_3 .kf_bit_side .kf_bit_fig .bit_caption h3 {
+		font-size:14px;
+	}
+	.bit_meta li:first-child{
+		display:none;
+	}
+	.content .kf_bit_coin.coin_2.coin_3 .kf_bit_fig {
+		width: 43.6%;
+	}
+	.content .kf_bit_coin.coin_2.coin_3 .kf_bit_side {
+		width: 28.2%;
+	}
+	.kf_news_text h4{
+		font-size:18px;
+	}
+	.detail_row .kf_detail_text h2{
+		font-size:30px;
+	}
+	.text > p:nth-child(2) {
+		display: none;
+	}
+	.kf_post_list p{
+		font-size:14px;
+	}
+	.kf_news_comment .kf_commet_field{
+		display:block;
+	}
+	.blog_meta_list .kf_share_link li a{
+		margin-left:18px;
+	}
+	.kf_leave_comment .kf_commet_field{
+		display:block;
+	}
+	.kf_widget_text .bit_meta.meta_2.meta_4 > li:last-child {
+		display: block;
+	}
+	.kf_widget_wrap .kf_widget_text .bit_meta.meta_2.meta_4 li{
+		padding:0px 12px;
+	}
+	.bit_meta.meta_2.meta_5 li:first-child{
+		display:block;
+	}
+	.kf_newsletter_text  .kf_commet_field{
+		display:block;
+	}
+	.kf_gallery_list.gallery_3 .col-md-2{
+		width:25%;
+	}
+}
+
+/*============	Media 979Px Start ============ */
+@media (max-width: 991px) {
+	.kf_bit_coin_row .kf_bit_side,
+	.kf_bit_coin_row .kf_bit_fig{
+		width:100%;
+		margin-bottom:10px;
+	}
+	.kf_bit_fig.fig_2, .kf_bit_business{
+		margin-bottom:10px;
+	}
+	.kf_blog_modren_text {
+		padding: 13px 10px;
+	}
+	.kf_side_tabs{
+		margin-bottom:30px;
+	}
+	.top_drop_btn,
+	.top_icon,
+	.kf_bit_business.bit_2 .slick-dots {
+		display: none !important;
+	}
+	.content .kf_bit_business.bit_2 {
+		padding-bottom: 60px;
+	}
+	.kf_news_text p{
+		height:80px;
+	}
+	.kf_side_latest{
+		margin-bottom:30px;
+	}
+	.kf_instagram_wrap .kf_instagram_btn{
+		margin-top:-47px auto auto;
+	}
+	.kf_top_bar .kf_top_left_text {
+		float: left;
+		width: 78%;
+	}
+	.kf_banner_add .kf_add_text{
+		width:30%;
+	}
+	.kf_banner_add .kf_add_content{
+		width:70%;
+	}
+	.kf_logo_wrap .kf_logo{
+		text-align:center;
+		padding:0px 0 15px;
+	}
+	.wrapper .kf_logo_wrap {
+		padding: 21px 0 35px;
+	}
+	.kf_nav_wrap .navigation ul > li{
+		margin-right:3px;
+	}
+	.kf_nav_wrap  .comment_form{
+		display:none;
+	}
+	.content .kf_bit_coin.coin_2.coin_3 .kf_bit_fig,
+	.content .kf_bit_coin.coin_2.coin_3 .kf_bit_side,
+	.content .kf_banner_add.add_2,
+	.kf_navigation_row .navigation .kf_menu_dropdown{
+		width:100%;
+	}	
+	.kf_widget_text{
+		margin-bottom:30px;
+	}
+	.kf_widget_text .comment_form{
+		float:left;
+	}
+	.top_icon.icon_2 {
+		display: block !important;
+	}
+	.content .kf_bit_coin.coin_2 .kf_bit_fig,
+	.content .kf_bit_coin.coin_2 .kf_bit_side {
+		width:100%;
+		padding:0px 10px;
+	}
+	.kf_news_text.text_2 p{
+		height:auto;
+	}
+	.kf_news_list .kf_news_text.text_2 {
+		padding: 4px 0 2px 30px;
+	}
+	.kf_gallery_list .kf_gallery_filter li{
+		padding:10px 20px;
+	}
+	.kf_gallery_text h4{
+		font-size:18px;
+	}
+	.kf_magazine_list .kf_gallery_list.gallery_1 .filtr-item {
+		width: 50%;
+	}
+	.kf_gallery_list.gallery_1 .kf_gallery_text h6,
+	.kf_gallery_list.gallery_1 .kf_gallery_text h4{
+		font-size:11px;
+	}
+	.kf_gallery_list.gallery_2 .kf_gallery_text h4{
+		font-size:14px;
+	}
+	 .kf_gallery_list.gallery_3 .kf_gallery_text h4{
+		font-size:12px;
+	}
+	.kf_gallery_caption h4{
+		font-size:18px;
+	}
+	.detail_row .kf_detail_list blockquote{
+		width:100%;
+	}
+	.kf_leave_comment .kf_textarea{
+		margin-bottom:30px;
+	}
+	.thumb{
+		margin-top:30px;
+	}
+	.kf_contact_info {
+		margin-bottom: 30px;
+	}
+	.kf_leave_comment .form-submit.contact{
+		margin-bottom:30px;
+	}
+	.responsive_padding{
+		padding:0px 0px;
+	}
+	.kf_bit_coin_row .slick-prev, 
+	.kf_bit_coin_row .slick-next{
+		display:none !important;
+	}
+	.content .kf_bit_coin.coin_2 {
+		padding: 30px 0 15px;
+	}
+	.content .kf_bit_coin.coin_2 .kf_bit_fig,
+	.content .kf_bit_coin.coin_2 .kf_bit_side{
+		padding:0px 15px;
+	}
+	.kf_about_fig_text > p:first-child {
+		display: none;
+	}
+	.kf_detail_list{
+		float:left;
+		width:100%;
+	}
+
+}
+
+/*============	Media 768Px Start ============ */ 
+@media (min-width: 768px) and (max-width: 990px) {
+	
+}
+
+/*============ Media 767Px Start ============ */
+@media (max-width: 767px) {
+	.kf_navigation_row .dl-menuwrapper {
+		display: block;
+	}
+	.kf_top_right_text span{
+		display:none;
+	}
+	.kf_top_bar .kf_top_left_text{
+		width:100%;
+	}
+	.kf_top_left_text p{
+		font-size:12px;
+	}
+	.kf_banner_add .kf_add_content {
+		width: 50%;
+	}
+	.kf_banner_add .kf_add_text {
+		width: 47%;
+	}
+	.navigation{
+		display:none;
+	}
+	.kf_news_list figure {
+		width: 100% !important;
+	}
+	.kf_famous_news .kf_news_text {
+		overflow: hidden;
+		padding: 10px 0 20px 10px;
+	}
+	.kf_news_text p {
+		height: auto;
+	}
+	.kf_newsletter_text .top_icon.icon_2{
+		display:block !important;
+	}
+	.kf_navigation_row .dl-menuwrapper .dl-menu {
+		backface-visibility: hidden;
+		margin: 0;
+		opacity: 0;
+		position: absolute;
+		width: 230px;
+		right: 100%;
+		background-color: #000;
+	}
+	.kf_about_text .kf_about_fig figure {
+		width: 100%;
+		margin-bottom:20px;	
+	}
+	.kf_about_text .kf_about_fig_text{
+		padding-left:1px;
+	}
+	.kf_news_list .kf_news_text.text_2 {
+		padding: 14px 0 2px 17px;
+	}
+	.kf_gallery_list .filtr-item{
+		padding:0 5px;
+	}
+	.kf_gallery_list .kf_gallery_filter li {
+		margin-bottom: 10px;
+	}
+	.kf_gallery_text h6,
+	.kf_gallery_text h4{
+		font-size:11px;
+	}
+	.kf_magazine_list .kf_gallery_list.gallery_3 .filtr-item,
+	.kf_magazine_list .kf_gallery_list.gallery_2 .filtr-item{
+		width:50%;
+	}
+	.kf_magazine_list .kf_gallery_list.gallery_1 .filtr-item{
+		width:100%;
+	}
+	.kf_gallery_list .kf_gallery_fig:hover .kf_gallery_rating {
+		bottom: 10px;
+	}
+	.kf_detail_text h2{
+		position:relative;
+		z-index:999;
+	}
+	.kf_detail_list blockquote h3{
+		font-size:16px;
+	}
+	.thumb{
+		margin-top:20px;
+	}
+	.detail_row .kf_share_link li a{
+		margin-left:0px;
+	}
+	.detail_row .blog_meta_list{
+		padding:14px 25px;
+	}
+	.detail_row .blog_meta_list > a {
+		display: inline-block;
+		text-align: center;
+		width: 100%;
+	}
+	.detail_row .blog_meta_list > a h5{
+		display:inline-block;
+	}
+	.detail_row .blog_meta_list > a i {
+		display: inline-block;
+		float:none;
+	}
+	.detail_row .kf_detail_post ul li::before{
+		border:none;
+	}
+	.kf_news_comment .kf_detail_news{
+		width:100%;
+		padding:30px 10px;
+	}
+	.kf_news_comment .kf_detail_news .kf_commet_field{
+	width:auto;
+	}	
+	.kf_detail_text,
+	.kf_detail_slide.audio{
+		position:relative;
+		z-index:999;
+	}
+	.kf_detail_slide {
+		position: relative;
+		z-index: 999;
+	}
+	.detail_row .kf_share_link {
+		float: left;
+		width: 100%;
+		text-align: center;
+	}
+	.content .kf_bit_coin {
+		padding: 20px 0 2px;
+	}
+	.responsive_padding{
+		padding:0px 0px;
+	}
+	footer .kf_widget_wrap{
+		padding:43px 0 10px;
+	}
+	.content .kf_magazine_add{
+		padding:10px 0px 26px;
+	}
+	.kf_bit_business.bit_2 .kf_bit_fig.fig_2 {
+		padding: 0px !important;
+	}
+	.content .kf_bit_coin.coin_2.coin_3 .kf_bit_fig{
+		padding:0 15px;
+	}
+	.kf_about_fig_text > p:first-child {
+		display: block;
+	}
+	.content .kf_comments {
+		padding-bottom: 10px;
+	}
+	.content .kf_news_comment {
+		margin-bottom: 35px;
+	}
+}
+
+/*============ Media 480Px Star ============ */
+@media (max-width: 480px) {
+	.kf_top_left_text {
+		display: none;
+	}
+	.kf_top_right_text .top_icon{
+		display:block !important;
+		text-align: center;
+		width: 100%;
+		border:none;
+	}
+	.kf_top_right_text .top_icon li{
+		float:none;
+		display:inline-block;
+	}
+	.kf_banner_add .kf_add_content,
+	.kf_top_right_text {
+		float: left;
+		text-align: center;
+		width: 100%;
+	}
+	.kf_banner_add .kf_add_text{
+		display:none;
+	}
+	.bit_caption h2 {
+		font-size: 17px;
+	}
+	.kf_bit_fig h3{
+		font-size: 14px;
+	}
+	.kf_bit_fig .bit_caption{
+		bottom:5px;
+	}
+	.kf_bit_side .kf_bit_fig:hover .bit_caption {
+		bottom: 10px;
+	}
+	.kf_newsletter_text .kf_comment_form .comment_form,
+	.kf_blog_list .kf_blog_modren figure {
+		float: left;
+		width:100%;
+	}
+	.kf_bit_fig.fig_2 .bit_caption h4{
+		font-size:16px;
+	}
+	.kf_bit_fig.fig_2  .bit_meta.meta_2 li {
+		margin-right: 5px;
+	}
+	.kf_bit_fig.fig_2  .bit_meta.meta_2 li a i{
+		margin-right:5px;
+	}
+	.kf_bit_business.bit_2 .slick-next,
+	.kf_bit_business.bit_2 .slick-prev{
+		bottom:-43px !important;
+	}
+	.kf_selling_add h3{
+		font-size:17px;
+	}
+	.kf_newsletter_text h2{
+		font-size:18px;
+	}
+	.content .kf_bit_coin.coin_2 .bit_caption {
+		bottom: 5px;
+	}	
+	.kf_bit_coin.coin_2 .bit_meta > li:first-child {
+		display: none;
+	}
+	.kf_magazine_row .col-md-4.col-sm-6.col-xs-6{
+		width:100%;
+	}
+	.kf_news_text.text_2 h3{
+		font-size:18px;
+	}
+	.kf_magazine_list .kf_gallery_list.gallery_3 .filtr-item,
+	.kf_magazine_list .kf_gallery_list.gallery_2 .filtr-item,
+	.kf_gallery_list .filtr-item{
+		width:100%;
+	}
+	.detail_row .kf_detail_text h2{
+		font-size:26px;
+	}
+	.detail_row .kf_detail_list blockquote:after, 
+	.detail_row .kf_detail_list blockquote:before{
+		content:"";
+	}
+	.kf_detail_deta h3{
+		font-size:20px;
+	}
+	.blog_meta_list .theam_btn_large{
+		padding:7px 9px;
+		font-size:12px;
+	}
+	.blog_meta_list .kf_share_link li a i {
+		margin-right: 5px;
+	}
+	.detail_row .kf_detail_post ul li{
+		margin-bottom:20px;
+		width:100%;
+	}
+	.kf_comments .comment_item figure {
+		width:100%;
+		margin-bottom: 30px;
+	}
+	.kf_detail_post .kf_post_list a{
+		width:100%;
+		text-align:center;
+	}
+	.kf_news_comment .kf_detail_news{
+		z-index:999;
+	}
+	.kf_news_comment .kf_detail_news:before{
+		z-index:-1;
+	}
+	.kf_news_comment .kf_detail_news .kf_detail_news h3{
+		font-size:20px;
+	}
+	.kf_bit_business.bit_2 .section_heading.hdg_1 h2{
+		font-size:20px;
+	}
+	.kf_top_right_text .top_icon{
+		margin-left:0px;
+	}
+	.responsive_padding{
+		padding:0px 0px;
+	}
+	.content .kf_bit_business.bit_2.padding_0 {
+		padding-bottom: 63px;
+	}
+	.kf_gallery_list .kf_gallery_filter li {
+		font-size: 11px;
+	}	
+	.kf_gallery_list .kf_gallery_filter{
+		margin-bottom:20px;
+	}
+	.comment_item .comment_text{
+		padding-left:1px;
+	}
+	.kf_widget_text .kf_blog_modren_text {
+		padding: 20px 10px 0px;
+	}
+}
