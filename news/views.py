@@ -108,9 +108,9 @@ def post_list(request,category):
 
   context= {
     'posts':posts,
+    'recent': recent,
     'category': category,
     'business_list' : business_list,
-    'recent': recent
   }
   return render(request,'blog-list.html',context)
 
