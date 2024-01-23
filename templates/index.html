@@ -534,7 +534,7 @@
                   <h2>Travel News</h2>
                   <span></span>
                 </div>
-                {% if travel_list %} {% for news in travel_list|slice:"0:6" %}
+                {% for news in travel_list|slice:"0:6" %}
                 <div class="kf_news_list">
                   <figure>
                     <img
@@ -562,9 +562,7 @@
                     <p>{{news.overview}}</p>
                   </div>
                 </div>
-                {% endfor %} {% else %}
-                <p>No Posts available</p>
-                {% endif %}
+                {% endfor %}
               </div>
               <div class="col-md-3">
                 <!--SIDE BAR WRAP START-->
