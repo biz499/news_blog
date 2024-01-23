@@ -104,11 +104,13 @@ def post(request,slug):
 def post_list(request,category):
   business_list = News_Post.objects.filter (category='business').order_by ('-timestamp')
   posts = News_Post.objects.filter(category=category)
+  recent = News_Post.objects.order_by ('-timestamp') [0:4]
 
   context= {
     'posts':posts,
     'category': category,
     'business_list' : business_list,
+    'recent': recent
   }
   return render(request,'blog-list.html',context)
 
