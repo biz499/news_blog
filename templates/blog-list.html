@@ -40,7 +40,6 @@
       <!--header-->
       {% include 'header.html' %}
 
-
       <!--CONTENT START-->
       <div class="content">
         <!--KF MAGZINE LIST START-->
@@ -55,14 +54,18 @@
               {% for post in posts %}
               <div class="kf_news_list">
                 <figure>
-                  <img src="{{post.thumbnail_url}}" style="width: 290px;height: 336px;object-fit: cover;" alt="" />
+                  <img
+                    src="{{post.thumbnail_url}}"
+                    style="width: 290px; height: 336px; object-fit: cover"
+                    alt=""
+                  />
                 </figure>
                 <div class="kf_news_text text_2">
-                  <a class="theam_btn margin-bottom" href="#">{{post.category}}</a>
+                  <a class="theam_btn margin-bottom" href="#"
+                    >{{post.category}}</a
+                  >
                   <h3>
-                    <a href="#"
-                      >{{post.title}}</a
-                    >
+                    <a href="#">{{post.title}}</a>
                   </h3>
                   <ul class="bit_meta meta_2 meta_5">
                     <li>
@@ -70,18 +73,16 @@
                     </li>
                     <li>
                       <a href="#"
-                        ><i class="fa fa-calendar-check-o"></i>{{post.timestamp|date:'F j, Y' }}</a
+                        ><i class="fa fa-calendar-check-o"></i
+                        >{{post.timestamp|date:'F j, Y' }}</a
                       >
                     </li>
                   </ul>
-                  <p>
-                    {{post.overview}}
-                  </p>
+                  <p>{{post.overview}}</p>
                   <a class="theam_btn_large" href="#">See More</a>
                 </div>
               </div>
               {% endfor %}
-
             </div>
             <div class="col-md-3 responsive_padding">
               <!--SIDE BAR WRAP START-->
@@ -411,7 +412,6 @@
       <!--CONTENT END-->
 
       {% include 'footer.html' %}
-
     </div>
     <!--church wrapper ends-->
     <!-- jquery javascript-->

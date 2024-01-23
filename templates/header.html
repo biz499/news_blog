@@ -51,10 +51,7 @@
                       alt=""
                     />U.S
                   </button>
-                  <ul
-                    class="dropdown-menu"
-                    aria-labelledby="dropdownMenu1"
-                  >
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                     <li>
                       <a href="#"
                         ><img
@@ -128,11 +125,23 @@
             <li>
               <a class="active" href="#"><i class="fa fa-home"></i></a>
             </li>
-            <li><a class="yellow_light_bg" href="index.html">Home</a></li>
-            <li><a class="blue_bg" href="{% url 'post_list' category='news' %}">news</a></li>
-            <li><a class="green_bg" href="{% url 'post_list' category='sports' %}">sports</a></li>
+            <li><a class="yellow_light_bg" href="/">Home</a></li>
+            <li>
+              <a class="blue_bg" href="{% url 'post_list' category='news' %}"
+                >news</a
+              >
+            </li>
+            <li>
+              <a class="green_bg" href="{% url 'post_list' category='sports' %}"
+                >sports</a
+              >
+            </li>
             <li class="mega_menu">
-              <a class="parat_bg" href="{% url 'post_list' category='business' %}">Business</a>
+              <a
+                class="parat_bg"
+                href="{% url 'post_list' category='business' %}"
+                >Business</a
+              >
               <div class="kf_menu_dropdown">
                 <div class="mega-slider">
                   {% for biz in business_list|slice:"0:5" %}
@@ -140,31 +149,38 @@
                     <div class="kf_blog_medium grid">
                       <figure>
                         <img
-                          src="{{biz.thumbnail_url}}" style="width: 269px;height: 212px; object-fit: cover;"
+                          src="{{biz.thumbnail_url}}"
+                          style="width: 269px; height: 212px; object-fit: cover"
                           alt=""
                         />
                       </figure>
                       <div class="kf_blog_text">
                         <h6><a href="#">{{biz.title|slice:":50"}}</a></h6>
                         <a href="#"
-                          ><i class="fa fa-calendar-check-o"></i>{{biz.timestamp|date:'F j, Y' }}</a
+                          ><i class="fa fa-calendar-check-o"></i
+                          >{{biz.timestamp|date:'F j, Y' }}</a
                         >
                       </div>
                     </div>
                   </div>
                   {% endfor %}
-
                 </div>
               </div>
             </li>
             <li>
-              <a class="pinck_bg" href="{% url 'post_list' category='entertainment' %}">entertainment</a>
+              <a
+                class="pinck_bg"
+                href="{% url 'post_list' category='entertainment' %}"
+                >entertainment</a
+              >
             </li>
             <li>
-              <a class="blue_bg" href="{% url 'post_list' category='travel' %}">Travel</a>
+              <a class="blue_bg" href="{% url 'post_list' category='travel' %}"
+                >Travel</a
+              >
             </li>
             <li>
-              <a class="yellow_bg" href="contact-us.html">contact us</a>
+              <a class="yellow_bg" href="{% url 'contact' %}">contact us</a>
             </li>
           </ul>
         </div>
@@ -173,7 +189,7 @@
           <button class="dl-trigger">Open Menu</button>
           <ul class="dl-menu">
             <li class="active">
-              <a class="active" href="index.html">Home</a>
+              <a class="active" href="/">Home</a>
             </li>
             <li class="menu-item kode-parent-menu">
               <a href="{% url 'post_list' category='news' %}">>News</a>
@@ -185,12 +201,14 @@
               <a href="{% url 'post_list' category='business' %}">>Business</a>
             </li>
             <li class="menu-item kode-parent-menu">
-              <a href="{% url 'post_list' category='entertainment' %}">>entertainment</a>
+              <a href="{% url 'post_list' category='entertainment' %}"
+                >>entertainment</a
+              >
             </li>
             <li class="menu-item kode-parent-menu">
               <a href="{% url 'post_list' category='travel' %}">>Travel</a>
             </li>
-            <li><a href="contact-us.html">contact Us</a></li>
+            <li><a href="{% url 'contact' %}">contact Us</a></li>
           </ul>
         </div>
         <!--DL Menu END-->

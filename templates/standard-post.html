@@ -41,7 +41,6 @@
       <!--header-->
       {% include 'header.html' %}
 
-
       <!--CONTENT START-->
       {% block content %}
       <div class="content">
@@ -65,7 +64,7 @@
                 </li>
               </ul>
             </div>
-            <div class="kf_detail_slide">
+            <!-- <div class="kf_detail_slide">
               <div class="kf_detail_fig">
                 <figure class="overlay">
                   <img
@@ -78,39 +77,28 @@
                   </figcaption>
                 </figure>
               </div>
-            </div>
+            </div> -->
             <div class="row">
               <div class="col-md-9">
                 <div class="kf_detail_list">
-                  <p>{{post.description}}</p>
-                  <blockquote>
+                  <!-- <p>{{post.description}}</p> -->
+                  <!-- <blockquote>
                     <h3>{{post.title}}</h3>
-                  </blockquote>
+                  </blockquote> -->
                   <div class="kf_detail_caption">
                     <figure>
-                      <img
-                        src="{{post.thumbnail_url}}"
-                        alt=""
-                      />
+                      <img src="{{post.thumbnail_url}}" alt="" />
                     </figure>
-                    
                   </div>
                   <div class="kf_detail_deta">
-                    
-
                     <div class="row">
                       <div class="col-md-6">
-                        <div class="text">
-                          {{post.description|safe}}
-                        </div>
+                        <div class="text">{{post.description|safe}}</div>
                       </div>
                       <div class="col-md-6">
                         <div class="thumb">
                           <figure>
-                            <img
-                              src="{{post.thumbnail_url}}"
-                              alt=""
-                            />
+                            <img src="{{post.thumbnail_url}}" alt="" />
                           </figure>
                         </div>
                       </div>
@@ -135,22 +123,22 @@
                   </div>
                   <div class="kf_detail_post">
                     <ul>
-<li>
-            {% if post.get_previous %}
-                <a href="{{ post.get_previous.get_absolute_url }}">
-                    <i class="fa fa-angle-double-left"></i> Previous Post
-                </a>
-                <p>{{ post.get_previous.title }}</p>
-            {% endif %}
-        </li>
-        <li class="next">
-            {% if post.get_next %}
-                <a href="{{ post.get_next.get_absolute_url }}">
-                    Next Post <i class="fa fa-angle-double-right"></i>
-                </a>
-                <p>{{ post.get_next.title }}</p>
-            {% endif %}
-        </li>
+                      <li>
+                        {% if post.get_previous %}
+                        <a href="{{ post.get_previous.get_absolute_url }}">
+                          <i class="fa fa-angle-double-left"></i> Previous Post
+                        </a>
+                        <p>{{ post.get_previous.title }}</p>
+                        {% endif %}
+                      </li>
+                      <li class="next">
+                        {% if post.get_next %}
+                        <a href="{{ post.get_next.get_absolute_url }}">
+                          Next Post <i class="fa fa-angle-double-right"></i>
+                        </a>
+                        <p>{{ post.get_next.title }}</p>
+                        {% endif %}
+                      </li>
                     </ul>
                   </div>
 
@@ -225,7 +213,6 @@
                       </div>
                     </div>
                   </div>
-
                 </div>
               </div>
               <div class="col-md-3">
@@ -270,6 +257,7 @@
                       </div>
                     </div>
                     <ul>
+                      {% for news in recent|slice:"0:4" %}
                       <li>
                         <div class="kf_blog_modren">
                           <figure>
@@ -279,101 +267,24 @@
                             />
                           </figure>
                           <div class="kf_blog_modren_text">
-                            <h6>Pound volatile after Bank vote</h6>
+                            <h6>{{news.title}}</h6>
                             <ul class="bit_meta meta_2 meta_4">
                               <li>
                                 <a href="#"
-                                  ><i class="fa fa-user"></i>John Throat</a
+                                  ><i class="fa fa-user"></i>{{news.author}}</a
                                 >
                               </li>
                               <li>
                                 <a href="#"
-                                  ><i class="fa fa-calendar-check-o"></i>3
-                                  Months</a
+                                  ><i class="fa fa-calendar-check-o"></i
+                                  >{{news.timestamp|date:'F j, Y'}}</a
                                 >
                               </li>
                             </ul>
                           </div>
                         </div>
                       </li>
-                      <li>
-                        <div class="kf_blog_modren">
-                          <figure>
-                            <img
-                              src="{% static 'extra-images/side-list-fig1.jpg' %}"
-                              alt=""
-                            />
-                          </figure>
-                          <div class="kf_blog_modren_text">
-                            <h6>Pound volatile after Bank vote</h6>
-                            <ul class="bit_meta meta_2 meta_4">
-                              <li>
-                                <a href="#"
-                                  ><i class="fa fa-user"></i>John Throat</a
-                                >
-                              </li>
-                              <li>
-                                <a href="#"
-                                  ><i class="fa fa-calendar-check-o"></i>3
-                                  Months</a
-                                >
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="kf_blog_modren">
-                          <figure>
-                            <img
-                              src="{% static 'extra-images/side-list-fig2.jpg' %}"
-                              alt=""
-                            />
-                          </figure>
-                          <div class="kf_blog_modren_text">
-                            <h6>Pound volatile after Bank vote</h6>
-                            <ul class="bit_meta meta_2 meta_4">
-                              <li>
-                                <a href="#"
-                                  ><i class="fa fa-user"></i>John Throat</a
-                                >
-                              </li>
-                              <li>
-                                <a href="#"
-                                  ><i class="fa fa-calendar-check-o"></i>3
-                                  Months</a
-                                >
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="kf_blog_modren">
-                          <figure>
-                            <img
-                              src="{% static 'extra-images/side-list-fig3.jpg' %}"
-                              alt=""
-                            />
-                          </figure>
-                          <div class="kf_blog_modren_text">
-                            <h6>Pound volatile after Bank vote</h6>
-                            <ul class="bit_meta meta_2 meta_4">
-                              <li>
-                                <a href="#"
-                                  ><i class="fa fa-user"></i>John Throat</a
-                                >
-                              </li>
-                              <li>
-                                <a href="#"
-                                  ><i class="fa fa-calendar-check-o"></i>3
-                                  Months</a
-                                >
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </li>
+                      {% endfor %}
                     </ul>
                   </div>
                   <!--KF SOCIAL LIST START-->
@@ -557,7 +468,6 @@
       <!--CONTENT END-->
 
       {% include 'footer.html' %}
-
     </div>
     <!-- jquery javascript-->
     <script src="{% static 'js/jquery.js' %}"></script>

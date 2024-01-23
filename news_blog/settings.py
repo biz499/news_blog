@@ -28,7 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [ '143.110.254.47', 'localhost', 'cloudphant.xyz']
 
-
+    
 # Application definition
 
 INSTALLED_APPS = [
