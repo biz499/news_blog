@@ -488,8 +488,7 @@
               <span></span>
             </div>
             <div class="kf-slider-bitcoin">
-              {% if entertainment_list %} {% for news in
-              entertainment_list|slice:"0:5" %}
+              {% for news in entertainment_list|slice:"0:5" %}
               <div>
                 <div class="kf_bit_fig fig_2">
                   <figure class="overlay">
@@ -520,9 +519,7 @@
                   </figure>
                 </div>
               </div>
-              {% endfor %} {% else %}
-              <p>No posts available</p>
-              {% endif %}
+              {% endfor %}
             </div>
           </div>
         </div>
