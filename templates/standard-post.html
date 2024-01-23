@@ -95,16 +95,9 @@
                       <div class="col-md-6">
                         <div class="text">{{post.description|safe}}</div>
                       </div>
-                      <div class="col-md-6">
-                        <div class="thumb">
-                          <figure>
-                            <img src="{{post.thumbnail_url}}" alt="" />
-                          </figure>
-                        </div>
-                      </div>
                     </div>
                   </div>
-                  <div class="blog_meta_list">
+                  <!-- <div class="blog_meta_list">
                     <a href=""
                       ><i class="fa fa-share"></i>
                       <h5>Share This Post :</h5></a
@@ -120,7 +113,7 @@
                         >
                       </li>
                     </ul>
-                  </div>
+                  </div> -->
                   <div class="kf_detail_post">
                     <ul>
                       <li>
@@ -145,72 +138,22 @@
                   <div class="kf_like_post">
                     <h3 class="comment_title">You May Also Like</h3>
                     <div class="row">
+                      {% for biz in business_list|slice:"0:3" %}
                       <div class="col-md-4">
                         <div class="kf_blog_medium grid">
                           <figure>
-                            <img
-                              src="{% static 'extra-images/blog_grid.jpg' %}"
-                              alt=""
-                            />
+                            <img src="{{biz.thumbnail_url}}" alt="img" />
                           </figure>
                           <div class="kf_blog_text">
                             <h6>
-                              <a href="#"
-                                >Business Conference<br />
-                                Meeting held</a
-                              >
+                              <a href="#">{{biz.title|slice:":50"}}</a>
                             </h6>
-                            <p>
-                              Sed cursus eget risus non vestibulum Sed in
-                              molestie..
-                            </p>
+                            <p>{{biz.overview | slic:":100"}}</p>
                           </div>
                         </div>
                       </div>
-                      <div class="col-md-4">
-                        <div class="kf_blog_medium grid">
-                          <figure>
-                            <img
-                              src="{% static 'extra-images/blog_grid1.jpg' %}"
-                              alt=""
-                            />
-                          </figure>
-                          <div class="kf_blog_text">
-                            <h6>
-                              <a href="#"
-                                >Business Conference<br />
-                                Meeting held</a
-                              >
-                            </h6>
-                            <p>
-                              Sed cursus eget risus non vestibulum Sed in
-                              molestie..
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="kf_blog_medium grid">
-                          <figure>
-                            <img
-                              src="{% static 'extra-images/blog_grid2.jpg' %}"
-                              alt=""
-                            />
-                          </figure>
-                          <div class="kf_blog_text">
-                            <h6>
-                              <a href="#"
-                                >Business Conference<br />
-                                Meeting held</a
-                              >
-                            </h6>
-                            <p>
-                              Sed cursus eget risus non vestibulum Sed in
-                              molestie..
-                            </p>
-                          </div>
-                        </div>
-                      </div>
+
+                      {% endfor %}
                     </div>
                   </div>
                 </div>
