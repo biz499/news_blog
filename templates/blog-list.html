@@ -65,7 +65,7 @@
                     >{{post.category}}</a
                   >
                   <h3>
-                    <a href="#">{{post.title}}</a>
+                    <a href="{{post.get_absolute_url}}">{{post.title}}</a>
                   </h3>
                   <ul class="bit_meta meta_2 meta_5">
                     <li>
@@ -79,7 +79,9 @@
                     </li>
                   </ul>
                   <p>{{post.overview}}</p>
-                  <a class="theam_btn_large" href="#">See More</a>
+                  <a class="theam_btn_large" href="{{post.get_absolute_url}}"
+                    >See More</a
+                  >
                 </div>
               </div>
               {% endfor %}
