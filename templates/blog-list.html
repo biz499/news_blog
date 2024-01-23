@@ -126,6 +126,7 @@
                     </div>
                   </div>
                   <ul>
+                    {% for news in recent|slice:"0:4" %}
                     <li>
                       <div class="kf_blog_modren">
                         <figure>
@@ -135,101 +136,24 @@
                           />
                         </figure>
                         <div class="kf_blog_modren_text">
-                          <h6>Pound volatile after Bank vote</h6>
+                          <h6>{{news.title}}</h6>
                           <ul class="bit_meta meta_2 meta_4">
                             <li>
                               <a href="#"
-                                ><i class="fa fa-user"></i>John Throat</a
+                                ><i class="fa fa-user"></i>{{news.author}}</a
                               >
                             </li>
                             <li>
                               <a href="#"
-                                ><i class="fa fa-calendar-check-o"></i>3
-                                Months</a
+                                ><i class="fa fa-calendar-check-o"></i
+                                >{{news.timestamp|date:'F j, Y'}}</a
                               >
                             </li>
                           </ul>
                         </div>
                       </div>
                     </li>
-                    <li>
-                      <div class="kf_blog_modren">
-                        <figure>
-                          <img
-                            src="{% static 'extra-images/side-list-fig1.jpg' %}"
-                            alt=""
-                          />
-                        </figure>
-                        <div class="kf_blog_modren_text">
-                          <h6>Pound volatile after Bank vote</h6>
-                          <ul class="bit_meta meta_2 meta_4">
-                            <li>
-                              <a href="#"
-                                ><i class="fa fa-user"></i>John Throat</a
-                              >
-                            </li>
-                            <li>
-                              <a href="#"
-                                ><i class="fa fa-calendar-check-o"></i>3
-                                Months</a
-                              >
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="kf_blog_modren">
-                        <figure>
-                          <img
-                            src="{% static 'extra-images/side-list-fig2.jpg' %}"
-                            alt=""
-                          />
-                        </figure>
-                        <div class="kf_blog_modren_text">
-                          <h6>Pound volatile after Bank vote</h6>
-                          <ul class="bit_meta meta_2 meta_4">
-                            <li>
-                              <a href="#"
-                                ><i class="fa fa-user"></i>John Throat</a
-                              >
-                            </li>
-                            <li>
-                              <a href="#"
-                                ><i class="fa fa-calendar-check-o"></i>3
-                                Months</a
-                              >
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="kf_blog_modren">
-                        <figure>
-                          <img
-                            src="{% static 'extra-images/side-list-fig3.jpg' %}"
-                            alt=""
-                          />
-                        </figure>
-                        <div class="kf_blog_modren_text">
-                          <h6>Pound volatile after Bank vote</h6>
-                          <ul class="bit_meta meta_2 meta_4">
-                            <li>
-                              <a href="#"
-                                ><i class="fa fa-user"></i>John Throat</a
-                              >
-                            </li>
-                            <li>
-                              <a href="#"
-                                ><i class="fa fa-calendar-check-o"></i>3
-                                Months</a
-                              >
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </li>
+                    {% endfor %}
                   </ul>
                 </div>
                 <!--KF SOCIAL LIST START-->
@@ -240,10 +164,6 @@
                         <a class="twitter" href="#"
                           ><i class="fa fa-twitter"></i
                         ></a>
-                        <div class="kf_social_text">
-                          <h6>2,226</h6>
-                          <span><a href="#">Followers</a></span>
-                        </div>
                       </div>
                     </li>
                     <li>
@@ -251,21 +171,13 @@
                         <a class="facebook" href="#"
                           ><i class="fa fa-facebook"></i
                         ></a>
-                        <div class="kf_social_text">
-                          <h6>4,850</h6>
-                          <span><a href="#">Likes</a></span>
-                        </div>
                       </div>
                     </li>
                     <li>
                       <div class="kf_social_detail">
                         <a class="dribbble" href="#"
-                          ><i class="fa fa-dribbble"></i
+                          ><i class="fa fa-instagram"></i
                         ></a>
-                        <div class="kf_social_text">
-                          <h6>2,354</h6>
-                          <span><a href="#">Followers</a></span>
-                        </div>
                       </div>
                     </li>
                     <li>
