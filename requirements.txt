@@ -9,9 +9,6 @@ docopt==0.6.2
 idna==3.5
 keyutils==0.6
 Markdown==3.5.1
-netsnmp-python==1.0a1
-nftables==0.1
-npyscreen==4.10.5
 packaging==23.2
 pacman_mirrors==4.24.0
 pillow==10.2.0
