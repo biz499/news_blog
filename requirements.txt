@@ -4,7 +4,6 @@ cffi==1.16.0
 chardet==5.2.0
 charset-normalizer==3.3.2
 cryptography==41.0.7
-cupshelpers==1.0
 dnspython==2.4.2
 docopt==0.6.2
 idna==3.5
