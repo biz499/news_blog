@@ -10,7 +10,6 @@ idna==3.5
 keyutils==0.6
 Markdown==3.5.1
 packaging==23.2
-pacman_mirrors==4.24.0
 pillow==10.2.0
 ply==3.11
 pycairo==1.25.1
